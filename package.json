@@ -1,5 +1,5 @@
 {
-  "name": "angular2 app",
+  "name": "ng2-fundamentals-demo",
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run server\" ",
@@ -39,8 +39,5 @@
     "@types/core-js": "~0.9.34",
     "@types/node": "~6.0.46"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/inmallinath/Angular2App.git"
-  }
+  "repository": {}
 }
