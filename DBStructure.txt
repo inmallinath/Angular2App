@@ -1,0 +1,71 @@
+Class: Address:
+
+Id: int
+Street: string
+City: string
+StateProvince: string
+PostalCode: string
+CustomerID: int
+DateAdded: DateTime
+DateModified: DateTime
+AddressType: int
+Customer
+
+Enum: AddressType:
+
+Office 1
+Shipping 2
+
+Class: Customer:
+
+Id: int
+FirstName: string
+LastName: string
+Email: string
+Phone:  string
+ICollection<Order> Orders
+ICollection<Address> Addresses
+
+Class: ProductVendor
+
+Id: int
+Name: string
+logoURL: string
+ICollection<Product> Products
+
+Class: Product
+
+Id: int
+Name: string
+Description: string
+Identifier: string
+ProductVendorId: int
+WarrantyYears: int
+ImageUrl: string
+
+Class: Order
+
+Id: int
+DateShpped: DateTime
+CustomerId: int
+Customer
+OrderType: int
+ETA: DateTime
+Carrier:
+ICollection<OrderItem> OrderItems
+
+Enum: OrderType
+
+RMA 1
+DOA 2
+Other 3
+
+OrderItem
+
+Id: int
+Quantity: int
+OrderId: int
+Order
+ProductId: int
+Product
+WarrantyStatus: Boolean

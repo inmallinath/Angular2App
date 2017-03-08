@@ -1,0 +1,30 @@
+
+<div class='panel-body'>
+    <div class='has-error'></div>
+    <div class='table-responsive'>
+        <table class='table table-bordered' *ngIf='shipments && shipments.length'>
+            <thead style='font-size: 16px;'>
+                <tr>
+                    <th>Case #</th>
+                    <th>Serial #</th>
+                    <th>Model</th>
+                    <th>Date</th>
+                    <th>ETA</th>
+                    <th>Shipper</th>
+                    <th>Destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let shipment of shipments | searchShipment: searchInput'  style='font-size: 12px'>
+                    <td>{{shipment.case}}</td>
+                    <td>{{shipment.serialNumber}}</td>
+                    <td>{{shipment.model}}</td>
+                    <td>{{shipment.date | formatDate}}</td>
+                    <td>{{shipment.eta | formatDate}}</td>
+                    <td>{{shipment.carrier}}</td>
+                    <td>{{shipment.destination}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

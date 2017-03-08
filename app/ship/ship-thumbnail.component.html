@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let shipment of shipments | searchShipment: searchInput">
+        <div class="well hoverwell thumbnail" (click)='displayCaseNumber(shipment.case)' >
+            <h2>{{shipment?.case}}</h2>
+            <div>S/N: {{shipment?.serialNumber}}</div>
+            <div>Model: {{shipment?.model}}</div>
+            <div>Date: {{shipment?.date | formatDate}}</div>
+            <div>ETA: {{shipment?.eta | formatDate}}</div>
+            <div>Shipper: {{shipment?.carrier}}</div>
+            <div>Sending To: {{shipment?.destination}}</div>
+        </div>
+    </div>
+</div>

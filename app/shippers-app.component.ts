@@ -1,10 +1,16 @@
-import  { Component } from '@angular/core'
+
+import { Component } from '@angular/core'
 
 @Component({
     selector: 'shippers-app',
-    template: '<h2>Ship your Stuff</h2>'
+    templateUrl: 'app/shippers-app.component.html'
 })
 
 export class ShippersAppComponent {
+    showGrid: boolean = false;
+    searchBy: string;
 
+    toggleDisplay(): void {
+        this.showGrid = !this.showGrid;
+    }
 }

@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <base href="/">
     <title>Angular 2 App</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
     <link rel="stylesheet" href="node_modules/ng2f-bootstrap/dist/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/toastr/build/toastr.min.js"></script>
+    <script src="node_modules/moment/min/moment.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
@@ -26,4 +31,5 @@
   <body class="container">
     <shippers-app>Loading!!</shippers-app>  
   </body>
+  <script>toastr.success('Hey Mallinath')</script>
 </html>

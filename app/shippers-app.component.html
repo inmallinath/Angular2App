@@ -1,0 +1,28 @@
+<nav-bar></nav-bar>
+<div class='panel panel-success' style='border: 5px solid #fff'>
+    <div class='panel-heading' style='font-size:x-large;  border-bottom-color: #fff'>
+        All Shipments from Vivonet
+    </div>
+    <div class='row' style='margin-top: 10px;'>
+        <div class='col-md-3' style='margin-left: 20px;'>
+            <h3  style='margin-top: 0;'>Search Product Model:</h3>
+        </div>
+        <div>
+            <input type='text' class='col-md-3' [(ngModel)]='searchBy' />
+        </div>
+        <div class='col-md-2' style='float:right; margin-right: 20px;'>
+            <button class="btn btn-block btn-success" (click)="toggleDisplay()">
+                Display {{showGrid ? 'Grid' : 'Table'}} <i class="fa {{showGrid  ? 'fa-th-large' : 'fa-table'}}"></i>
+            </button>
+        </div>
+    </div>
+    <div class='row' *ngIf='searchBy'>
+        <div class='col-md-4' style='margin-left: 20px;'>
+            <h3>Searching For: <span style='color: red;'>{{searchBy}}</span></h3>
+        </div>
+        
+    </div>
+    <hr style="border: 2px solid #fff">
+        <ship-grid [searchInput]='searchBy' *ngIf='showGrid'></ship-grid>
+        <ship-thumbnail [searchInput]='searchBy' *ngIf='!showGrid'></ship-thumbnail>
+</div>

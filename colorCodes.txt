@@ -1,0 +1,35 @@
+#09AFD0 / #485563 / hr: #596a7b
+#6D6E70 / #4e5d6c
+#254776
+#8CC63E
+#91268F
+#FBAF3F
+#F05C59
+
+When creating headlines use DIN Bold or Motiva Sans Bold 18-24pt in title case.
+When creating headlines use DIN Regular or Motiva Sans Bold 14-16pt in sentence case.
+For typesetting body copy use Calibri 8-12pt
+
+"FF DIN",
+"Motiva Sans"
+
+Shipment
+Id - Int, Not Null Identity
+CaseNumber - string, Not Null
+ShipDate - DateTime, Not Null
+EstimatedDate - DateTime, Not Null
+CaseStatus - Boolean
+Destination - Canada, USA
+Carrier - CanadaPost, Novex, UPS, Fedex, Other
+OrderType - AER, Advance Replacement, DOA, Loaner, Office Request, RMA, Sales Order
+ShippingCost - decimal
+ReturnCost - decimal
+ProductId - FK int
+
+Product
+Id - int, Not Null Identity
+Name - string, Not Null
+Description - string, Not Null
+Identifier - string, Not Null
+Type - Remote Printer, Terminal, Customer Display, Line Display, Receipt Printer, Scale 
+InWarranty - boolean

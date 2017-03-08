@@ -1,7 +1,16 @@
 /* app css stylesheet */
 .hoverwell:hover {
-  background-color: #485563;
+  background-color: #09AFD0;
   cursor: pointer;
+}
+
+.navbar-default {
+    background-color: #09AFD0;
+    border-color: #E7E7E7;
+}
+
+body {
+  background-color: #6D6E70;
 }
 
 .container {
